@@ -1,0 +1,115 @@
+
+* {
+    --color1: #F45B69;
+    --bg: #fdf7f7;
+    --color3: #22181c;
+    --red: #5a0002cb;
+    --color5: #f13030;
+    --green: #091c00;
+    --alt1: #3E000C;
+    --alt2: #FB4B4E;
+    --alt3: #FFCBDD;
+    --alt4: #7C0B2B;
+    --alt5: #D80032;
+    --bg2: #104547;
+
+}
+
+body {
+    background-color: var(--bg);
+    text-shadow: none;
+}
+.landing {
+    height: 800px;
+    overflow: hidden;
+    background-color: black;
+    background-image: url("img/bg2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+} 
+.landing .title {
+    width: 800px;
+    /* background-color: var(--red); */
+    color: var(--bg);
+    margin-left: 20%;
+    margin-top: 120px;
+    border-radius: 3px;
+    padding: 30px;
+}
+
+.landing .title h4 {
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.landing .title h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.landing .title a.phone {
+    color: var(--bg);
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: 2px solid var(--alt5);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.menu {
+    display: block;
+    background-color: var(--alt5);
+    color: var(--bg);
+    margin: 0 20%;
+    position: absolute;
+    bottom: 10%;
+}
+.nav-link {
+    color: var(--green);
+    margin-left: 40px;
+}
+#carouselExampleIndicators .carousel-inner img{
+    height: 600px;
+}
+
+section {
+    margin-top: 80px;
+}
+
+.meter::before {
+    content: '';
+    position: absolute;
+    background-color: #ddd;
+    width: 90%;
+    height: 1px;
+    left: 5%;
+    top: -12px;
+}
+.meter::after {
+    content: '';
+    position: absolute;
+    background-color: #ddd;
+    width: 90%;
+    height: 1px;
+    left: 5%;
+    bottom: -12px;
+}
+
+section h1 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.input-group-text {
+    background-color: white;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
