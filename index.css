@@ -27,6 +27,7 @@ body {
     background-color: black;
     background-image: url("img/bg2.png");
     background-size: cover;
+    background-position: center; 
     background-repeat: no-repeat;
 } 
 .landing .title {
@@ -104,7 +105,7 @@ a.hovereffect:hover {
 }
 
 section {
-    margin-top: 80px !important;
+    margin-top: 140px !important;
     position: relative;
 }
 
@@ -132,16 +133,17 @@ section h1 {
     margin-bottom: 20px;
 }
 
-section::before {
+.topborder::before {
     content: '';
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(216,0,50,0.2) 45%, rgba(216,0,50,0.20) 55%, rgba(255,255,255,1) 100%);
     width: 90%;
     height: 1px;
-    top: -40px;
+    top: -70px;
     left: 5%;
     position: absolute;
 }
+
 
 section#pricing img {
     width: 100%;
@@ -200,3 +202,75 @@ textarea.form-control {
         display: none;
     }
   }
+
+@media screen and (max-width: 992px) {
+
+    .landing {
+        height: 800px;
+        overflow: hidden;
+        background-color: black;
+        background-image: url("img/bg2.png");
+        background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat;
+    } 
+    .landing .title {
+        width: 80%;
+        /* background-color: var(--red); */
+        color: var(--bg);
+        margin-left: 10%;
+        margin-top: 50px;
+        border-radius: 3px;
+        padding: 30px;
+    }
+}
+
+.phonelanding {
+    display: none;
+}
+.phoneimages {
+    display: none;
+}
+@media screen and (max-width: 576px) {
+
+    .landing {
+        display: none;
+        height: 300px;
+        overflow: hidden;
+        background-image: url("img/bg2.png");
+        background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-image: none;
+        background-color: var(--bg);
+    } 
+    .phonelanding {
+        display: block;
+        text-align: center;
+        margin: 40px auto;
+    }
+    section {
+        margin-top: 40px !important;
+    }
+    .topborder::before {
+        display: none;
+    }
+    #carouselExampleIndicators {
+        display: none;
+    }
+    .phoneimages {
+        display: block;
+    }
+    .phoneimages p {
+        font-size: large;
+        font-weight: 600;
+    }
+    .phoneimages img {
+        width: 100%;
+    }
+    .phoneimages div { 
+        margin-bottom: 40px;
+    }
+
+}
+
