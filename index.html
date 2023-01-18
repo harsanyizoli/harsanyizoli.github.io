@@ -6,31 +6,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>home</title>
 
+        <meta name="description" content="rovid leirast ide">
 
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="index.css">
 
+        <link rel="icon" href="img/logo.png">
+
         <script type="text/javascript" src="js/bootstrap.js"></script>
     </head>
     <body>
-        <div class="main">
-            <nav class="navbar navbar-expand-lg">
+        <div class="main " id="top">
+            <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand" onclick="scroll_top()">
+                        <img src="img/logo.png" alt="Bootstrap" width="62px" height="34px">
+                      </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-coll" aria-controls="nav-coll" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="collapse navbar-collapse" id="nav-coll">
                         <div class="navbar-nav">
-                            <a class="nav-link hovereffect" aria-current="page" href="#">Home</a>
-                            <a class="nav-link hovereffect" href="#calculator">Költség kalkulátor</a>
-                            <a class="nav-link hovereffect" href="#pricing">Ajánlatkérés</a>
-                            <a class="nav-link hovereffect" href="#contact">Elérhetőségek</a>
+                            <a class="nav-link hovereffect navactive" aria-current="page" onclick="scroll_top()">Home</a>
+                            <a class="nav-link hovereffect" onclick="scroll_to('references')">Referenciák</a>
+                            <a class="nav-link hovereffect" onclick="scroll_to('calculator')">Költség kalkulátor</a>
+                            <a class="nav-link hovereffect" onclick="scroll_to('pricing')">Ajánlatkérés</a>
+                            <a class="nav-link hovereffect" onclick="scroll_to('contact')">Elérhetőségek</a>
                         </div>
                     </div>
                 </div>
             </nav>
-            <div class="landing">
+            <div class="landing scrollspy" id="home">
                 <div class="title">
                     <h4>carouselExampleIndicators</h4>
                     <h3>Carousels don’t automatically normalize slide dimensions. As such, you may need to use additional utilities or custom styles to appropriately size content. .</h3>
@@ -43,11 +49,30 @@
             <div class="phonelanding">
               <h4>carouselExampleIndicators</h4>
             </div>
-            <div class="container">
+            <div class="container-md">
                 <section class="mt-4">
                   <h3 class="text-center">There are also media queries and mixins for targeting a single</h3>
                 </section>
-                <section class="topborder">
+                <section class="topborder scrollspy" id="references">
+                    <div class="row gy-2 gx-2">
+                        <div class="col-6 col-md-3 refs"><div class="refimgs"><img src="img/3.jpg" alt=""></div></div>
+                        <div class="col-6 col-md-3 refs"><div class="refimgs"><img src="img/3.jpg" alt=""></div></div>
+                        <div class="col-6 col-md-3 refs"><div class="refimgs"><img src="img/3.jpg" alt=""></div></div>
+                        <div class="col-6 col-md-3 refs"><div class="refimgs"><img src="img/3.jpg" alt=""></div></div>
+                    </div>
+                    <div id="moreimages" class="row gy-2 gx-2 noshow">
+                        <div class="col-md-3 col-6 refs"><div class="refimgs"><img src="img/3.jpg" alt=""></div></div>
+                        <div class="col-md-3 col-6 refs"><div class="refimgs"><img src="img/3.jpg" alt=""></div></div>
+                        <div class="col-md-3 col-6 refs"><div class="refimgs"><img src="img/3.jpg" alt=""></div></div>
+                        <div class="col-md-3 col-6 refs"><div class="refimgs"><img src="img/3.jpg" alt=""></div></div>
+                        <div class="col-md-3 col-6 refs"><div class="refimgs"><img src="img/3.jpg" alt=""></div></div>
+                        <div class="col-md-3 col-6 refs"><div class="refimgs"><img src="img/3.jpg" alt=""></div></div>
+                        <div class="col-md-3 col-6 refs"><div class="refimgs"><img src="img/3.jpg" alt=""></div></div>
+                    </div>
+                    <div id="togglemoreimages" class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="black" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+                    </div>
+                    <!-- 
                     <div id="carouselExampleIndicators" class="carousel slide">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -89,10 +114,10 @@
                           <img src="img/4.jpg" alt="">
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                 </section>
                 <section class="topborder">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi error vel eos aliquid optio labore accusantium suscipit soluta explicabo deleniti amet fugit maxime rerum saepe consectetur officia, quos quaerat neque.</section>
-                <section id="calculator" class="clearfix row topborder">
+                <section id="calculator" class="clearfix row topborder scrollspy">
                     <div class="col-xl-9 col-md-12">
                         <h1>Költség kalkulátor</h1>
                         <form>
@@ -126,7 +151,7 @@
                     </div>
                     <div class="col-md-0 col-xl-3"></div>
                 </section>
-                <section id="pricing" class="clearfix topborder">
+                <section id="pricing" class="clearfix topborder scrollspy">
                     <h1>Ajánlatkérés</h1>
                     <div class="row">
                         <div class="col-md-0 col-xl-3">
@@ -134,12 +159,16 @@
                         </div>
                         <div class="col-xl-9 col-md-12">
                             <div class="mb-3">
+                                <label for="" class="form-label">Név</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                            </div>
+                            <div class="mb-3">
                                 <label for="" class="form-label">Email</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="example@gmail.com">
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Phone</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="+36 20 123 4567">
                             </div>
                             <label for="" class="form-label">Type</label>
                             <div class="mb-3">
@@ -165,12 +194,65 @@
                         </div>
                     </div>
                 </section>
-                <section id="contact" class="topborder">
+                <section id="contact" class="topborder scrollspy">
                     <h1>Elérhetőségek</h1>
-                    <p>Toasts are intended to be small interruptions to your visitors or users, so to help those with screen readers and similar assistive technologies, you should wrap your toasts in an aria-live region. Changes to live regions (such as injecting/updating a toast component) are automatically announced by screen readers without needing to move the user’s focus or otherwise interrupt the user. Additionally, include aria-atomic="true" to ensure that the entire toast is always announced as a single (atomic) unit, rather than just announcing what was changed (which could lead to problems if you only update part of the toast’s content, or if displaying the same toast content at a later point in time). If the information needed is important for the process, e.g. for a list of errors in a form, then use the alert component instead of toast.</p>
+                    <div class="row">
+                        <div class="col-sm-6 col-12">
+                            <ul>
+                                <li>
+                                    <a class="" href="tel:+36123456789" target="_self">
+                                        <svg id="phonesvg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path fill="black" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                                        +36 12 345 6789</a>
+                                </li>
+                                <li>
+                                    <a href="mailto:info@fixbau.hu  ">
+                                        <svg id="phonesvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="black" d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192c0-35.3-28.7-64-64-64s-64 28.7-64 64s28.7 64 64 64s64-28.7 64-64z"/></svg>
+                                        info@fixbau.hu
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-12 logo2">
+                            <img src="img/logo.png" alt="">
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
+        <div class="modal fade" tabindex="-1" id="imagemodal">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/4.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
         <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
